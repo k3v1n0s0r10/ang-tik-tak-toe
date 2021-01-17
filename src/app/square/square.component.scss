@@ -1,0 +1,17 @@
+p {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+
+  &.X {
+    background-color: green;
+  }
+  &.O {
+    background-color: red;
+  }
+}

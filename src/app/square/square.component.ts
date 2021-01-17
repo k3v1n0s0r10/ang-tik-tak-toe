@@ -2,7 +2,11 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-square',
-  template: ` <p>{{ value }}</p> `,
+  template: `
+    <p [ngClass]="value ? value : ''">
+      {{ value }}
+    </p>
+  `,
   styleUrls: ['./square.component.scss'],
 })
 export class SquareComponent {

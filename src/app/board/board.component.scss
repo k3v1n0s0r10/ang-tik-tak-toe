@@ -1,10 +1,42 @@
-main {
-  display: grid;
-  grid-template-columns: 200px 200px 200px;
-  grid-gap: 0px;
+button {
+  padding: 1rem;
+  border: none;
+  background-color: rgb(56, 56, 56);
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  border-radius: 1rem;
+  outline: none;
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
 }
 
-app-square {
-  border: 1px gray solid;
-  height: 200px;
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 6rem);
+  grid-template-rows: repeat(3, 6rem);
+  grid-gap: 2px;
+
+  app-square {
+    width: 100%;
+    height: 100%;
+    background-color: #c4c4c4;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  main {
+    grid-template-columns: repeat(3, 10rem);
+    grid-template-rows: repeat(3, 10rem);
+  }
 }
